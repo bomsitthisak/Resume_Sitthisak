@@ -1,0 +1,17 @@
+.bg-darkgreen{
+   background-color: #5ba598;
+}
+
+.btn-lightgreen{
+    color: white;
+    background-color: #5ba598;
+}
+
+.btn-lightgreen :hover{
+    background-color: #5ba598;
+    
+}
+
+.greenmed{
+    color:  #61ab9f;
+}

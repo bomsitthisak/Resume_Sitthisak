@@ -75,33 +75,35 @@ for(let counter=0; counter < 10; counter++){
 
 //DOM
 
-function appenImageElem(keyword, index){
+function appendImageElem(keyword, index) {
     const imgElem = document.createElement('img');
     imgElem.src = `https://source.unsplash.com/400x225/?${keyword}&sig=${index}`;
-
-    const galleryELem = document.querySelector('.gallery');
-    galleryELem.appendChild(imgElem);
-}
-
-function removePhotos(){
-    const galleryElem = document.querySelector('.gallery')
+  
+    const galleryElem = document.querySelector('.gallery');
+    galleryElem.appendChild(imgElem);
+  }
+  
+  function removePhotos() {
+    const galleryElem = document.querySelector('.gallery');
     galleryElem.innerHTML = '';
-}
-
-function searchPhoto(event){
+  }
+  
+  function searchPhotos(event) {
     const keyword = event.target.value;
-    if(event.key === 'Enter' && keyword ){
-        removePhotos();
-            for(let i=1; i<= 9; i++){
-            appenImageElem(keyword, i);
-        }
+  
+    if (event.key === 'Enter' && keyword) {
+      removePhotos();
+  
+      for (let i = 1; i <= 19; i++) {
+        appendImageElem(keyword, i);
+      }
     }
-    
-}
-
-function run(){
+  }
+  
+  function run() {
     const inputElem = document.querySelector('input');
-    inputElem.addEventListener('keydown', searchPhoto);
-}
-run();
+    inputElem.addEventListener('keydown', searchPhotos);
+  }
+  
+  run();
 
