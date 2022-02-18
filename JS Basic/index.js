@@ -5,6 +5,7 @@ let city = "null";
 let bigNumber = 10n;
 console.log(myName, height, isMale, city, bigNumber);
 
+//object
 const person = {
     name: 'Sitthisak',
     height: 176,
